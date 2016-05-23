@@ -4,79 +4,155 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
 import excecoes.ExcecaoPalavraJaEncontrada;
 import excecoes.ExcecaoPosicaoInvalida;
-import modelo.Fachada;
+import interfaces.EstrategiaSelecionaLetras;
+import modelo.FabricaEstrategiaSelecionaLetras;
+import modelo.GerenciadorJogo;
+import modelo.FabricaEstrategiaSelecionaLetras.TiposEstrategia;
 import visao.JanelaPrincipal;
+import visao.JanelaSelecionaNivel;
+import visao.Mensagem;
 
 public class Controle {
 
-	private Fachada fachadaJogo;
-	JanelaPrincipal janelaJogo;
-			
-	public Controle(){
-		fachadaJogo = new Fachada();
-		janelaJogo = new JanelaPrincipal(retornaLetrasEmJogo(), retornaNumeroPalavrasComTresLetras(), 
-						retornaNumeroPalavrasComQuatroLetras(), retornaNumeroPalavrasComCincoLetras(), 
-						retornaNumeroPalavrasComSeisLetras());	
-		adicionaActionListener();
+	private GerenciadorJogo gerenciadorJogo;
+	private JanelaPrincipal janelaJogo;
+	private JanelaSelecionaNivel janelaNivel;
+	private Mensagem mensagem;
+	private int vezesQueDicaFoiClicado;
+
+	public Controle() {
+		EstrategiaSelecionaLetras estrategia = new FabricaEstrategiaSelecionaLetras()
+				.retornaEstrategia(TiposEstrategia.Aleatoria);
+		gerenciadorJogo = new GerenciadorJogo(estrategia);
+		mensagem = new Mensagem();
+
+		janelaNivel = new JanelaSelecionaNivel();
+		adicionaActionListenerModoFacil();
+		adicionaActionListenerModoMedio();
+		adicionaActionListenerModoDificil();
 	}
 
-	private void adicionaActionListener() {
+	private void adicionaActionListenerModoDificil() {
+		janelaNivel.setAcaoBotaoDificil(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				executaJanelaJogo();
+				janelaJogo.setAcaoMostraDica(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						mensagem.exibeMensagem("Nao se pode ver as palavras no modo dificil.");
+					}
+				});
+				janelaNivel.fechaJanelaNiveis();
+			}
+		});
+	}
+
+	private void adicionaActionListenerModoMedio() {
+		janelaNivel.setAcaoBotaoMedio(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				executaJanelaJogo();
+				janelaJogo.setAcaoMostraDica(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						if (vezesQueDicaFoiClicado != 3) {
+							janelaJogo.exibePalavrasJogo(gerenciadorJogo.retornaStringsJogo());
+							vezesQueDicaFoiClicado++;
+						} else
+							mensagem.exibeMensagem("Voce não pode mais ver as palavras");
+					}
+				});
+				janelaNivel.fechaJanelaNiveis();
+			}
+		});
+	}
+
+	private void adicionaActionListenerModoFacil() {
+		janelaNivel.setAcaoBotaoFacil(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				executaJanelaJogo();
+				janelaJogo.setAcaoMostraDica(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						janelaJogo.exibePalavrasJogo(gerenciadorJogo.retornaStringsJogo());
+					}
+				});
+				janelaNivel.fechaJanelaNiveis();
+			}
+		});
+	}
+
+	private void adicionaActionListenerBotaoChute() {
 		janelaJogo.adicionaAcaoAoBotaoChute(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-            	
-            	int posicao;
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+				int posicao;
 				try {
-					if(verificaSeChuteEhValido(janelaJogo.getPalavraChuteDigitada())){
+					if (verificaSeChuteEhValido(janelaJogo.getPalavraChuteDigitada())) {
 						try {
 							posicao = retornaPosicaoPalavra(janelaJogo.getPalavraChuteDigitada());
 							janelaJogo.setPosicaoChutePalavra(posicao);
 						} catch (ExcecaoPosicaoInvalida e1) {
-							janelaJogo.exibeMensagem("Tente novamente.");
+							mensagem.exibeMensagem("Tente novamente.");
 						}
-					}else{
-						janelaJogo.exibeMensagem("Parece que essa palavra nao esta entre os anagramas.");					
+					} else {
+						mensagem.exibeMensagem("Parece que essa palavra nao esta entre os anagramas.");
 					}
 				} catch (ExcecaoPalavraJaEncontrada e1) {
-					janelaJogo.exibeMensagem("Voce ja acertou essa palavra, nao tem faz sentido chuta-la novamente.");
+					mensagem.exibeMensagem("Voce ja acertou essa palavra, nao faz sentido chuta-la novamente.");
 				}
-            	janelaJogo.setPalavraChuteDigitada("");
-            }
-        });
-	}
-			
-	public boolean verificaSeChuteEhValido(String palavraUsuario) throws ExcecaoPalavraJaEncontrada {
-			if(fachadaJogo.verificaSeChuteEhValido(palavraUsuario)){
-				return true;
-			}else{
-				return false;
+				janelaJogo.setPalavraChuteDigitada("");
 			}
-	}
-	
-	public int retornaPosicaoPalavra(String palavra) throws ExcecaoPosicaoInvalida{
-		return fachadaJogo.retornaPosicaoPalavra(palavra);
-	}
-	
-	public List<Character> retornaLetrasEmJogo(){
-		return fachadaJogo.retornaLetrasParaJogo();
-	}
-	//fazer dentro de um for
-	public int retornaNumeroPalavrasComQuatroLetras(){
-		return fachadaJogo.retornaNumPalavrasComCertoNumDeLetras(4);
+		});
 	}
 
-	public int retornaNumeroPalavrasComCincoLetras(){
-		return fachadaJogo.retornaNumPalavrasComCertoNumDeLetras(5);
+	private void executaJanelaJogo() {
+		janelaJogo = new JanelaPrincipal(retornaLetrasEmJogo(), palavrasComTresLetras(), palavrasComQuatroLetras(),
+				palavrasComCincoLetras(), palavrasComSeisLetras());
+		adicionaActionListenerBotaoChute();
+
+		janelaJogo.criaBotaoMostraDica();
+
 	}
-	
-	public int retornaNumeroPalavrasComSeisLetras(){
-		return fachadaJogo.retornaNumPalavrasComCertoNumDeLetras(6);
+
+	public boolean verificaSeChuteEhValido(String palavraUsuario) throws ExcecaoPalavraJaEncontrada {
+		if (gerenciadorJogo.verificaSeChuteEhValido(palavraUsuario)) {
+			return true;
+		} else {
+			return false;
+		}
 	}
-	
-	public int retornaNumeroPalavrasComTresLetras(){
-		return fachadaJogo.retornaNumPalavrasComCertoNumDeLetras(3);
+
+	public int retornaPosicaoPalavra(String palavra) throws ExcecaoPosicaoInvalida {
+		return gerenciadorJogo.retornaPosicaoPalavra(palavra);
 	}
-	
+
+	public List<Character> retornaLetrasEmJogo() {
+		return gerenciadorJogo.getLetrasJogo();
+	}
+
+	public int palavrasComQuatroLetras() {
+		return gerenciadorJogo.retornaNumPalavrasComCertoNumDeLetras(4);
+	}
+
+	public int palavrasComCincoLetras() {
+		return gerenciadorJogo.retornaNumPalavrasComCertoNumDeLetras(5);
+	}
+
+	public int palavrasComSeisLetras() {
+		return gerenciadorJogo.retornaNumPalavrasComCertoNumDeLetras(6);
+	}
+
+	public int palavrasComTresLetras() {
+		return gerenciadorJogo.retornaNumPalavrasComCertoNumDeLetras(3);
+	}
+
 }

@@ -6,7 +6,7 @@ import interfaces.EstrategiaSelecionaLetras;
 
 public class FabricaEstrategiaSelecionaLetras {
 	
-	public enum TiposEstrategia{Aleatoria, Ordenada}
+	public enum TiposEstrategia{Aleatoria, ParaTeste}
 	
 	private Map<TiposEstrategia, EstrategiaSelecionaLetras> mapaTipoEstrategia;
 	private static FabricaEstrategiaSelecionaLetras fabrica;
@@ -14,7 +14,7 @@ public class FabricaEstrategiaSelecionaLetras {
 	public FabricaEstrategiaSelecionaLetras(){
 		this.mapaTipoEstrategia = new HashMap<TiposEstrategia, EstrategiaSelecionaLetras>();
 		this.mapaTipoEstrategia.put(TiposEstrategia.Aleatoria, new EstrategiaSelecionaLetrasDeFormaAleatoria());
-		this.mapaTipoEstrategia.put(TiposEstrategia.Ordenada, new EstrategiaSelecionaLetrasDeFormaOrdenada());
+		this.mapaTipoEstrategia.put(TiposEstrategia.ParaTeste, new EstrategiaSelecionaLetrasParaTeste());
 	}
 	
 	public EstrategiaSelecionaLetras retornaEstrategia(TiposEstrategia tipo){

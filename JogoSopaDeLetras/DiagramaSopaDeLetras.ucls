@@ -3,62 +3,61 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="modelo.FabricaEstrategiaSelecionaLetras" project="JogoSopaDeLetras" 
     file="/JogoSopaDeLetras/src/modelo/FabricaEstrategiaSelecionaLetras.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="864" y="1484"/>    
+    <position height="117" width="326" x="99" y="355"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="modelo.GerenciadorDados" project="JogoSopaDeLetras" 
-    file="/JogoSopaDeLetras/src/modelo/GerenciadorDados.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="117" width="178" x="775" y="624"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="3" language="java" name="excecoes.ExcecaoPosicaoInvalida" project="JogoSopaDeLetras" 
+  <class id="2" language="java" name="excecoes.ExcecaoPosicaoInvalida" project="JogoSopaDeLetras" 
     file="/JogoSopaDeLetras/src/excecoes/ExcecaoPosicaoInvalida.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="162" x="993" y="624"/>    
+    <position height="99" width="162" x="210" y="0"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="controle.Main" project="JogoSopaDeLetras" 
+  <class id="3" language="java" name="controle.Main" project="JogoSopaDeLetras" 
     file="/JogoSopaDeLetras/src/controle/Main.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="113" x="1195" y="624"/>    
+    <position height="99" width="113" x="524" y="0"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="modelo.EstrategiaSelecionaLetrasDeFormaOrdenada" project="JogoSopaDeLetras" 
-    file="/JogoSopaDeLetras/src/modelo/EstrategiaSelecionaLetrasDeFormaOrdenada.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1645" y="1663"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="6" language="java" name="testes.JogoSopaDeLetrasTest" project="JogoSopaDeLetras" 
+  <class id="4" language="java" name="testes.JogoSopaDeLetrasTest" project="JogoSopaDeLetras" 
     file="/JogoSopaDeLetras/src/testes/JogoSopaDeLetrasTest.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1486" y="716"/>    
+    <position height="207" width="318" x="1139" y="0"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="modelo.Fachada" project="JogoSopaDeLetras" 
-    file="/JogoSopaDeLetras/src/modelo/Fachada.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="153" width="269" x="1348" y="889"/>    
+  <class id="5" language="java" name="modelo.Palavra" project="JogoSopaDeLetras" 
+    file="/JogoSopaDeLetras/src/modelo/Palavra.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="165" x="1036" y="1142"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="visao.JanelaSelecionaNivel" project="JogoSopaDeLetras" 
+    file="/JogoSopaDeLetras/src/visao/JanelaSelecionaNivel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1593" y="537"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="modelo.EstrategiaSelecionaLetrasParaTeste" project="JogoSopaDeLetras" 
+    file="/JogoSopaDeLetras/src/modelo/EstrategiaSelecionaLetrasParaTeste.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="292" x="475" y="355"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -67,7 +66,7 @@
   </class>  
   <class id="8" language="java" name="controle.Controle" project="JogoSopaDeLetras" 
     file="/JogoSopaDeLetras/src/controle/Controle.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="225" width="247" x="1706" y="624"/>    
+    <position height="315" width="223" x="1553" y="0"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -76,7 +75,7 @@
   </class>  
   <interface id="9" language="java" name="interfaces.EstrategiaSelecionaLetras" project="JogoSopaDeLetras" 
     file="/JogoSopaDeLetras/src/interfaces/EstrategiaSelecionaLetras.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1304" y="1944"/>    
+    <position height="81" width="292" x="630" y="1142"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -85,7 +84,7 @@
   </interface>  
   <class id="10" language="java" name="visao.JanelaPrincipal" project="JogoSopaDeLetras" 
     file="/JogoSopaDeLetras/src/visao/JanelaPrincipal.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1925" y="1160"/>    
+    <position height="747" width="412" x="1915" y="355"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -95,137 +94,172 @@
   <class id="11" language="java" name="modelo.EstrategiaSelecionaLetrasDeFormaAleatoria" project="JogoSopaDeLetras" 
     file="/JogoSopaDeLetras/src/modelo/EstrategiaSelecionaLetrasDeFormaAleatoria.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1977" y="1673"/>    
+    <position height="117" width="292" x="807" y="355"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <enumeration id="12" language="java" name="modelo.FabricaEstrategiaSelecionaLetras.TiposEstrategia" 
+  <class id="12" language="java" name="modelo.PalavrasParaJogo" project="JogoSopaDeLetras" 
+    file="/JogoSopaDeLetras/src/modelo/PalavrasParaJogo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="621" width="338" x="1241" y="1142"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="visao.JanelaPrincipal.AcaoTeclado" project="JogoSopaDeLetras" 
+    file="/JogoSopaDeLetras/src/visao/JanelaPrincipal.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="194" x="1915" y="1142"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="14" language="java" name="modelo.FabricaEstrategiaSelecionaLetras.TiposEstrategia" 
     project="JogoSopaDeLetras" file="/JogoSopaDeLetras/src/modelo/FabricaEstrategiaSelecionaLetras.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="862" y="1717"/>    
+    <position height="117" width="154" x="99" y="1142"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <class id="13" language="java" name="modelo.GerenciadorJogo" project="JogoSopaDeLetras" 
+  <class id="15" language="java" name="modelo.GerenciadorJogo" project="JogoSopaDeLetras" 
     file="/JogoSopaDeLetras/src/modelo/GerenciadorJogo.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="351" width="269" x="1185" y="1424"/>    
+    <position height="261" width="269" x="1139" y="355"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="14" language="java" name="modelo.Pontuacoes" project="JogoSopaDeLetras" 
-    file="/JogoSopaDeLetras/src/modelo/Pontuacoes.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="709" y="667"/>    
+  <class id="16" language="java" name="excecoes.ExcecaoPalavraJaEncontrada" project="JogoSopaDeLetras" 
+    file="/JogoSopaDeLetras/src/excecoes/ExcecaoPalavraJaEncontrada.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="195" x="790" y="0"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="15">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="16" name="gerenciadorJogo">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="17" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
+  <class id="17" language="java" name="visao.Mensagem" project="JogoSopaDeLetras" 
+    file="/JogoSopaDeLetras/src/visao/Mensagem.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1813" y="524"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="18">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="19" name="gerenciadorJogo"/>      
+      <multiplicity id="20" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="21">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="22" name="mapaTipoEstrategia"/>      
+      <multiplicity id="23" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="24">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="25" name="gerenciadorJogo"/>      
+      <multiplicity id="26" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="27">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="9"/>  
+  </realization>  
+  <association id="28">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="29" name="palavrasSelecionadas"/>      
+      <multiplicity id="30" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="31">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="32" name="mensagem"/>      
+      <multiplicity id="33" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="34">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="35" name="palavrasParaJogo"/>      
+      <multiplicity id="36" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="37">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="38" name="acoesBotoes"/>      
+      <multiplicity id="39" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="13" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="18">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="19" name="janelaJogo">        
-        <position height="0" width="0" x="82" y="-10"/>      
-      </attribute>      
-      <multiplicity id="20" minimum="0" maximum="1">        
-        <position height="0" width="0" x="82" y="-10"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="21">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="22" name="fachadaJogo">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="23" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <nesting id="24">    
+  <nesting id="40">    
     <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="12"/>  
+    <end type="TARGET" refId="14"/>  
   </nesting>  
-  <association id="25">    
+  <association id="41">    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="26" name="mapaTipoEstrategia">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="27" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="28">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="9"/>  
-  </realization>  
-  <association id="29">    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="30" name="estrategiaSelecao">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="31" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="32">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="33" name="fabrica">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="34" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
+      <attribute id="42" name="fabrica"/>      
+      <multiplicity id="43" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="35">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="9"/>  
-  </realization>  
-  <association id="36">    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="37" name="fachada">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="38" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
+  <association id="44">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="45" name="estrategiaSelecao"/>      
+      <multiplicity id="46" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
+    <end type="TARGET" refId="9" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <realization id="47">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="9"/>  
+  </realization>  
+  <association id="48">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="49" name="janelaJogo"/>      
+      <multiplicity id="50" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="51">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="52" name="janelaNivel"/>      
+      <multiplicity id="53" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <nesting id="54">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="13"/>  
+  </nesting>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

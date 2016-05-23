@@ -1,9 +1,9 @@
 Log Luiz Felipe Ribeiro Baroncello
 
-1- Adicionado sistema de estratégias para seleção das palavras do jogo;
-2- Apenas adicionado um tipo de estratégia;
-3- Apenas um conjunto de palavras é usado / foi adicionado para fazer testes gerais;
-4- Fachada ainda aparenta ser inutil, porém mostrará sua funcionalidade quando o sistema de pontos for adicionado;
-5- Interação funcionando parcialmente, falta evitar que se chute uma palavra ja chutada;
-6- Controle fazendo as ligações necessárias para o funcionamento sem que a interação precise instanciar algo de fora dela;
-7- retornaPosiçaoDaPalavra alterado para que se pudesse adicionar todas as palavras da interação em apenas um list;
+1- Adicionado classe palavra apenas para a que for selecionada;
+2- Adicionada estratégia para selecionar as palavras, uma para o jogo, e  outra para testes;
+3- Adicionado muitas palavras;
+4- Adicionado janelas;
+5- Sistema de pontuaçoes descontinuado;
+6- Adicionado sistema de niveis;
+7- Adicionado classe para ter todos os conjuntos que o jogo tem.
