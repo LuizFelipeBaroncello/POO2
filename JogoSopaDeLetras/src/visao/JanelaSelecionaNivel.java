@@ -32,16 +32,19 @@ public class JanelaSelecionaNivel extends JFrame {
 		botaoFacil = new JButton("Facil");
 		botaoFacil.setSize(128, 24);
 		botaoFacil.setLocation(16, 16);
+		botaoFacil.setToolTipText("Sempre podera ver as palavras do jogo");
 		getContentPane().add(botaoFacil);
 		
 		botaoMedio = new JButton("Medio");
 		botaoMedio.setSize(128, 24);
 		botaoMedio.setLocation(16, 48);
+		botaoMedio.setToolTipText("Podera ver as palavras do jogo apenas 3 vezes");
 		getContentPane().add(botaoMedio);
 		
 		botaoDificil = new JButton("Dificil");
 		botaoDificil.setSize(128, 24);
 		botaoDificil.setLocation(16, 80);
+		botaoDificil.setToolTipText("Nao podera ver as palavras do jogo atual");
 		getContentPane().add(botaoDificil);
 	}
 	
