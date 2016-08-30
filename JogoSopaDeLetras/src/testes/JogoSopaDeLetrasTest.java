@@ -52,5 +52,10 @@ public class JogoSopaDeLetrasTest {
 		assertEquals(6, gerenciadorJogo.retornaPosicaoPalavra("saio"));
 	}
 	
+	@Test
+	public void testaSeGitFunfa(){
+		//verificaçãVisual
+	}
+	
 	
 }
